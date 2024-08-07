@@ -1,0 +1,239 @@
+
+-- Table 1 SCHEMA: Ridership by city
+CREATE TABLE Ridership_Total (
+    id INTEGER PRIMARY KEY,
+    City TEXT NOT NULL,
+    Ridership_Amount INTEGER NOT NULL
+);
+INSERT INTO Ridership_Total (id, City, Ridership_Amount) VALUES
+(1, 'New York', 120000),
+(2, 'Los Angeles', 90000),
+(3, 'Chicago', 85000),
+(4, 'Houston', 80000),
+(5, 'Phoenix', 75000),
+(6, 'Philadelphia', 70000),
+(7, 'San Antonio', 65000),
+(8, 'San Diego', 60000),
+(9, 'Dallas', 55000),
+(10, 'San Jose', 50000),
+(11, 'Austin', 45000),
+(12, 'Jacksonville', 40000),
+(13, 'Fort Worth', 35000),
+(14, 'Columbus', 30000),
+(15, 'Charlotte', 25000),
+(16, 'San Francisco', 20000),
+(17, 'Indianapolis', 18000),
+(18, 'Seattle', 16000),
+(19, 'Denver', 14000),
+(20, 'Washington', 13000),
+(21, 'Boston', 12500),
+(22, 'El Paso', 12000),
+(23, 'Detroit', 11500),
+(24, 'Nashville', 11000),
+(25, 'Portland', 10500),
+(26, 'Memphis', 10000),
+(27, 'Oklahoma City', 9500),
+(28, 'Las Vegas', 9000),
+(29, 'Louisville', 8500),
+(30, 'Baltimore', 8000),
+(31, 'Milwaukee', 7500),
+(32, 'Albuquerque', 7000),
+(33, 'Tucson', 6500),
+(34, 'Fresno', 6000),
+(35, 'Mesa', 5500),
+(36, 'Sacramento', 5000),
+(37, 'Atlanta', 4500),
+(38, 'Kansas City', 4000),
+(39, 'Colorado Springs', 3500),
+(40, 'Miami', 3000),
+(41, 'Raleigh', 2500),
+(42, 'Omaha', 2000),
+(43, 'Long Beach', 1500),
+(44, 'Virginia Beach', 1000),
+(45, 'Oakland', 900),
+(46, 'Minneapolis', 800),
+(47, 'Tulsa', 700),
+(48, 'Arlington', 600),
+(49, 'Tampa', 500),
+(50, 'New Orleans', 400);
+
+-- Table 2: Customer information
+CREATE TABLE Customers (
+    CustomerID INTEGER PRIMARY KEY,
+    CustomerName TEXT NOT NULL,
+    CustomerEmail TEXT NOT NULL
+);
+INSERT INTO Customers (CustomerID, CustomerName, CustomerEmail) VALUES
+(101, 'John Doe', 'johndoe@example.com'),
+(102, 'Jane Smith', 'janesmith@example.com'),
+(103, 'Michael Brown', 'michaelbrown@example.com'),
+(104, 'Emily White', 'emilywhite@example.com'),
+(105, 'Alexander Johnson', 'alexanderjohnson@example.com'),
+(106, 'Samantha Miller', 'samanthamiller@example.com'),
+(107, 'Liam Davis', 'liamdavis@example.com'),
+(108, 'Olivia Garcia', 'oliviagarcia@example.com'),
+(109, 'Noah Wilson', 'noahwilson@example.com'),
+(110, 'Emma Martinez', 'emmamartinez@example.com'),
+(111, 'William Rodriguez', 'williamrodriguez@example.com'),
+(112, 'Sophia Anderson', 'sophiaanderson@example.com'),
+(113, 'James Thomas', 'jamesthomas@example.com'),
+(114, 'Isabella Taylor', 'isabellataylor@example.com'),
+(115, 'Benjamin Moore', 'benjaminmoore@example.com'),
+(116, 'Mia Jackson', 'miajackson@example.com'),
+(117, 'Lucas Lee', 'lucaslee@example.com'),
+(118, 'Amelia Harris', 'ameliaharris@example.com'),
+(119, 'Mason Clark', 'masonclark@example.com'),
+(120, 'Charlotte Lewis', 'charlottelewis@example.com'),
+(121, 'Ethan Young', 'ethanyoung@example.com'),
+(122, 'Madison Hernandez', 'madisonhernandez@example.com'),
+(123, 'Logan King', 'loganking@example.com'),
+(124, 'Ava Wright', 'avawright@example.com'),
+(125, 'Oliver Lopez', 'oliverlopez@example.com'),
+(126, 'Sophie Hill', 'sophiehill@example.com'),
+(127, 'Gabriel Scott', 'gabrielscott@example.com'),
+(128, 'Mia Adams', 'miaadams@example.com'),
+(129, 'Jacob Baker', 'jacobbaker@example.com'),
+(130, 'Amelia Green', 'ameliagreen@example.com'),
+(131, 'Ethan Gonzalez', 'ethangonzalez@example.com'),
+(132, 'Harper Smith', 'harpersmith@example.com'),
+(133, 'Mason Anderson', 'masonanderson@example.com'),
+(134, 'Lily Thompson', 'lilythompson@example.com'),
+(135, 'James Wilson', 'jameswilson@example.com'),
+(136, 'Isabella Martinez', 'isabellamartinez@example.com'),
+(137, 'William Hernandez', 'williamhernandez@example.com'),
+(138, 'Emma Clark', 'emmaclark@example.com'),
+(139, 'Jackson Martinez', 'jacksonmartinez@example.com'),
+(140, 'Ava Davis', 'avadavis@example.com'),
+(141, 'Oliver Garcia', 'olivergarcia@example.com'),
+(142, 'Charlotte Wilson', 'charlottewilson@example.com'),
+(143, 'Sophia Martinez', 'sophiamartinez@example.com'),
+(144, 'Mason Brown', 'masonbrown@example.com'),
+(145, 'Ella Davis', 'elladavis@example.com'),
+(146, 'Elijah Rodriguez', 'elijahrodriguez@example.com'),
+(147, 'Amelia Johnson', 'ameliajohnson@example.com'),
+(148, 'Lucas Smith', 'lucassmith@example.com'),
+(149, 'Mia Brown', 'miabrown@example.com'),
+(150, 'Ethan Walker', 'ethanwalker@example.com');
+
+-- Table 3: Eats Total
+CREATE TABLE Eats_Total (CustomerID INTEGER PRIMARY KEY, Repeat_Customer TEXT NOT NULL);
+INSERT INTO Eats_Total (CustomerID, Repeat_Customer) VALUES
+(101, 'Y'),
+(102, 'N'),
+(103, 'Y'),
+(104, 'Y'),
+(105, 'N'),
+(106, 'Y'),
+(107, 'N'),
+(108, 'Y'),
+(109, 'N'),
+(110, 'Y'),
+(111, 'N'),
+(112, 'Y'),
+(113, 'Y'),
+(114, 'N'),
+(115, 'Y'),
+(116, 'N'),
+(117, 'Y'),
+(118, 'N'),
+(119, 'Y'),
+(120, 'N'),
+(121, 'Y'),
+(122, 'N'),
+(123, 'Y'),
+(124, 'N'),
+(125, 'Y'),
+(126, 'N'),
+(127, 'Y'),
+(128, 'N'),
+(129, 'Y'),
+(130, 'N'),
+(131, 'Y'),
+(132, 'N'),
+(133, 'Y'),
+(134, 'N'),
+(135, 'Y'),
+(136, 'N'),
+(137, 'Y'),
+(138, 'N'),
+(139, 'Y'),
+(140, 'N'),
+(141, 'Y'),
+(142, 'N'),
+(143, 'Y'),
+(144, 'N'),
+(145, 'Y'),
+(146, 'N'),
+(147, 'Y'),
+(148, 'N'),
+(149, 'Y'),
+(150, 'N');
+
+
+SQL Queries Related to associated table 
+
+Find the number of cities in the database:
+
+SELECT COUNT(DISTINCT City) from Ridership_Total;
+
+City with teh most ridership:
+
+SELECT City, MAX(Ridership_Amount) FROM Ridership_Total
+GROUP BY City ORDER BY MAX(Ridership_Amount) DESC LIMIT 1
+
+Or…
+
+SELECT City, Ridership_Amount FROM Ridership_Total
+WHERE Ridership_Amount IN 
+(SELECT MAX(Ridership_Amount) FROM Ridership_Total);
+
+City with the lease ridership using aggregate functions:
+
+SELECT City, MIN(Ridership_Amount) FROM Ridership_Total
+GROUP BY City ORDER BY MIN(Ridership_Amount) DESC LIMIT 1;
+
+
+Or…
+
+SELECT City, Ridership_Amount FROM Ridership_Total
+WHERE Ridership_Amount IN 
+(SELECT MIN(Ridership_Amount) FROM Ridership_Total);
+
+Average ridership across all cities:
+
+Select AVG(Ridership_Amount) FROM Ridership_Total;
+
+Total riders across all cities:
+
+Select SUM(Ridership_Amount) FROM Ridership_Total;
+
+Creating CASE Statements:
+
+ If a city has under 5000 riders, the heat label for that city should be: Cold
+If a city has under between 5000 and 10000 riders, the heat label for that city should be: Warm
+If a city has between 10000 and 20000 riders, the heat label  for that city should be: Hot
+If a city has over 20000 riders, the heat label for that city should be: Fire
+
+
+SELECT City, Ridership_Amount,
+CASE 
+	WHEN Ridership_Amount < 5000 THEN 'Cold'
+	WHEN Ridership_Amount BETWEEN 5000 AND 10000 THEN 'Warm'
+	WHEN Ridership_Amount BETWEEN 10000 AND 20000 THEN 'Hot'
+	ELSE 'Fire'
+END AS Heat_Label
+FROM Ridership_Total; 
+
+OR 
+
+SELECT City, Ridership_Amount,
+CASE 
+	WHEN Ridership_Amount < 5000 THEN 'Cold'
+	WHEN Ridership_Amount >= 5000 AND Ridership_Amount <= 10000 THEN 'Warm'
+	WHEN Ridership_Amount > 10000 AND Ridership_Amount <= 20000 THEN 'Hot'
+	ELSE 'Fire'
+END AS Heat_Label
+FROM Ridership_Total;
+
+
+
